@@ -27,7 +27,7 @@ function randomColor(e) {
 //resets grid to size that user chooses 
 function resetGrid(newGridSize) {
     newGridSize = parseInt(prompt('Enter size of new grid (1-64)'));
-    if (newGridSize > 64 || newGridSize < 1 || isNaN(newGridSize)) {
+    while (newGridSize > 64 || newGridSize < 1 || isNaN(newGridSize)) {
       newGridSize = parseInt(prompt('MUST BE BETWEEN 1 & 64!!!'));
     }
     while (gridContainer.firstChild) gridContainer.removeChild(gridContainer.firstChild);
